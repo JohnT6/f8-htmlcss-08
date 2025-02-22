@@ -1,21 +1,17 @@
 @use "../abstracts";
 
 html.dark {
-    --primary-color-text: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(93%) sepia(7%)
-        saturate(27%) hue-rotate(243deg) brightness(107%) contrast(106%);
-    --header-bg-color: #171c28;
-    --body-bg-color: #292e39;
-    --top-act-group-bg-color: #292e39;
-    --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-    --top-act-group-separate-color: #ededf6;
-
-    @include abstracts.breakpoint(lg) {
-        --header-shadow-color: rgba(0, 0, 0, 0.2);
-    }
-
-    //Dropdown
     & {
+        --primary-color-text: #fff;
+        --icon-color: brightness(0) saturate(100%) invert(93%) sepia(7%)
+            saturate(27%) hue-rotate(243deg) brightness(107%) contrast(106%);
+        --header-bg-color: #171c28;
+        --body-bg-color: #292e39;
+        --top-act-group-bg-color: #292e39;
+        --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+        --top-act-group-separate-color: #ededf6;
+
+        //Dropdown
         --dropdown-bg-color: #2f3441;
         --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
         --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%)
@@ -25,5 +21,9 @@ html.dark {
         --menu-column-icon-color: brightness(0) saturate(100%) invert(94%)
             sepia(0%) saturate(2764%) hue-rotate(118deg) brightness(106%)
             contrast(96%);
+    }
+
+    @include abstracts.breakpoint(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 }
