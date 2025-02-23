@@ -9,6 +9,13 @@
     opacity: 0;
     transition: visibility 0.35s, opacity 0.35s;
 
+    @include abstracts.breakpoint(lg) {
+        visibility: visible;
+        opacity: 1;
+        position: initial;
+        padding-top: 0;
+    }
+
     &__inner {
         --inner-padding: 30px;
 
@@ -27,6 +34,18 @@
             translate: -50%;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0 40px;
+
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 
@@ -37,9 +56,15 @@
     position: relative;
     &__main {
         width: var(--main-column-width);
-        max-height: var(--max-inner-height);
+        height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -51,6 +76,10 @@
         margin-top: 22px;
     }
 
+    @include abstracts.breakpoint(lg) {
+        margin-top: 10px;
+    }
+
     &__icon {
         position: relative;
 
@@ -60,6 +89,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
 
         &-1 {
@@ -88,10 +121,18 @@
         margin-top: 4px;
         font-weight: 500;
         line-height: 1.5;
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 26px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -129,6 +170,12 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         max-height: var(--max-inner-height);
+        padding-left: 0;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
         padding-left: 0;
     }
 }
