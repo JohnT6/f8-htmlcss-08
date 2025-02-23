@@ -162,12 +162,15 @@ button {
   background: transparent;
 }
 
+a,
+img,
 button,
 input,
 textarea,
 select {
   font-family: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
@@ -1524,12 +1527,6 @@ html.dark {
   }
 }
 
-.fixed {
-  position: sticky;
-  top: -10px;
-  z-index: 2;
-}
-
 .top-bar {
   position: relative;
 }
@@ -1557,12 +1554,63 @@ html.dark {
 }
 @media (max-width: 991.98px) {
   .navbar {
-    display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    background-color: #fff;
+    margin-left: 0;
+    z-index: 9;
+    padding: 20px 0;
+    translate: -100%;
+    transition: translate 0.4s;
+  }
+  .navbar.show {
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s;
+}
+@media (max-width: 991.98px) {
+  .navbar__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+.navbar__close-btn {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .navbar__close-btn {
+    display: block;
+    padding: 10px 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .navbar__item:hover .dropdown {
-  visibility: initial;
+  visibility: visible;
   opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .navbar__item {
+    width: 100%;
+  }
+  .navbar__item:hover .dropdown {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 .navbar__link {
   column-gap: 6px;
@@ -1572,6 +1620,14 @@ html.dark {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.47;
+}
+@media (max-width: 991.98px) {
+  .navbar__link {
+    padding: 0 40px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    justify-content: space-between;
+  }
 }
 .navbar__arrow {
   margin-top: 3px;

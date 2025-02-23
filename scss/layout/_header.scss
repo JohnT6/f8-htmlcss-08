@@ -20,11 +20,14 @@
     }
 }
 
-.fixed {
-    position: sticky;
-    top: -10px;
-    z-index: 2;
-}
+// .sticky {
+//     width: 100%;
+//     position: fixed;
+//     left: 50%;
+//     translate: -50%;
+//     top: 0;
+//     z-index: 100;
+// }
 
 .top-bar {
     @extend %flexItemsCenter;
@@ -51,17 +54,70 @@
     }
 
     @include abstracts.breakpoint(lg) {
+        position: fixed;
+        inset: 0 50% 0 0;
+        background-color: #fff;
+        margin-left: 0;
+        z-index: 9;
+        padding: 20px 0;
+
+        translate: -100%;
+        transition: translate 0.4s;
+
+        &.show {
+            translate: 0;
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s, opacity 0.4s;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 8;
+            background: rgba($color: #000000, $alpha: 0.4);
+        }
+    }
+
+    &__close-btn {
         display: none;
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+        }
     }
 
     &__list {
         @extend %flexItemsCenter;
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
         &:hover .dropdown {
-            visibility: initial;
+            visibility: visible;
             opacity: 1;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+
+            &:hover .dropdown {
+                visibility: hidden;
+                opacity: 0;
+            }
         }
     }
 
@@ -75,6 +131,13 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0 40px;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            justify-content: space-between;
+        }
     }
 
     &__arrow {
