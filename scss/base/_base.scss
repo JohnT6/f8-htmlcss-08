@@ -64,7 +64,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-@include abstracts.breakpoint(lg) {
+@include abstracts.screen(lg) {
     ::-webkit-scrollbar {
         width: 3px;
     }
