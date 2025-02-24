@@ -7,7 +7,6 @@
     width: min(1240px, 100%);
     visibility: hidden;
     opacity: 0;
-    z-index: 999;
     transition: visibility 0.35s, opacity 0.35s;
 
     @include abstracts.breakpoint(lg) {
