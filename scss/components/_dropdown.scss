@@ -12,9 +12,9 @@
     @include abstracts.breakpoint(lg) {
         position: initial;
         padding-top: 0;
-        display: none;
         visibility: initial;
         opacity: initial;
+        display: none;
     }
 
     &__inner {

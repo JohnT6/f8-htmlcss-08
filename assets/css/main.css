@@ -1553,8 +1553,8 @@ body {
 }
 :root {
   --primary-color-text: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(6%) sepia(13%)
-      saturate(6167%) hue-rotate(226deg) brightness(96%) contrast(93%);
+  --icon-color: brightness(0) saturate(100%) invert(6%) sepia(13%) saturate(6167%) hue-rotate(226deg)
+      brightness(96%) contrast(93%);
   --header-bg-color: #eee;
   --body-bg-color: #f6f6f6;
   --top-act-group-bg-color: #fff;
@@ -1563,6 +1563,8 @@ body {
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
+  --sidebar-bg-color: #fff;
+  --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -1573,8 +1575,8 @@ body {
 
 html.dark {
   --primary-color-text: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(93%) sepia(7%)
-      saturate(27%) hue-rotate(243deg) brightness(107%) contrast(106%);
+  --icon-color: brightness(0) saturate(100%) invert(93%) sepia(7%) saturate(27%) hue-rotate(243deg)
+      brightness(107%) contrast(106%);
   --header-bg-color: #171c28;
   --body-bg-color: #292e39;
   --top-act-group-bg-color: #292e39;
@@ -1582,13 +1584,13 @@ html.dark {
   --top-act-group-separate-color: #ededf6;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%)
-      sepia(31%) saturate(351%) hue-rotate(185deg) brightness(95%)
-      contrast(94%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(31%) saturate(351%) hue-rotate(185deg)
+      brightness(95%) contrast(94%);
   --top-menu-border-color: #171c28;
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(94%)
-      sepia(0%) saturate(2764%) hue-rotate(118deg) brightness(106%)
-      contrast(96%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(2764%) hue-rotate(118deg)
+      brightness(106%) contrast(96%);
+  --sidebar-bg-color: #292e39;
+  --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1639,19 +1641,26 @@ html.dark {
   .navbar {
     position: fixed;
     inset: 0 50% 0 0;
-    background-color: #fff;
+    background-color: var(--sidebar-bg-color);
     margin-left: 0;
     z-index: 9;
     padding: 20px 0;
+    border-radius: 0px 20px 20px 0px;
     translate: -100%;
     transition: translate 0.4s;
   }
   .navbar.show {
     translate: 0;
+    box-shadow: 0px 40px 90px 20px var(--sidebar-shadow-color);
   }
   .navbar.show ~ .navbar__overlay {
     visibility: visible;
     opacity: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
   }
 }
 .navbar__overlay {
@@ -1676,12 +1685,27 @@ html.dark {
     padding: 10px 40px;
   }
 }
+@media (max-width: 575.98px) {
+  .navbar__close-btn {
+    padding: 0 20px 10px;
+  }
+}
 @media (max-width: 991.98px) {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
-    height: calc(100% - 26px);
+    height: calc(100% - 40px);
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 142px);
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__list {
+    height: calc(100% - 124px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1714,6 +1738,12 @@ html.dark {
     font-size: 1.6rem;
     line-height: 1.5;
     justify-content: space-between;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__link {
+    padding: 0 20px;
+    height: 44px;
   }
 }
 .navbar__arrow {
@@ -1779,6 +1809,29 @@ html.dark {
   cursor: pointer;
 }
 
+.nav-btn {
+  height: 50px;
+  padding: 0 40px;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .nav-btn {
+    height: 44px;
+    padding: 0 20px;
+  }
+}
+.nav-btn__title, .nav-btn__qnt {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.47;
+}
+.nav-btn__title {
+  margin-left: 16px;
+}
+.nav-btn__qnt {
+  margin-left: auto;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -1824,9 +1877,9 @@ html.dark {
   .dropdown {
     position: initial;
     padding-top: 0;
-    display: none;
     visibility: initial;
     opacity: initial;
+    display: none;
   }
 }
 .dropdown__inner {
