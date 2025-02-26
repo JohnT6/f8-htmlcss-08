@@ -24,6 +24,15 @@
         --cate-item-bg: #eee;
         --cate-item-thumb-bg: #fff;
         --cate-item-title-color: #000;
+
+        // Buttons
+        --filter-btn-color: #6c6c72;
+        --filter-btn-bg: #fff;
+        --like-btn-bg: #fff;
+
+        // Product Card
+        --product-card-bg: #fff;
+        --product-card-shadow: rgba(237, 237, 246, 0.2);
     }
 
     @include abstracts.screen(lg) {
