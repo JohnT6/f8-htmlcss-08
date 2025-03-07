@@ -58,6 +58,14 @@ body {
     overflow: overlay;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    line-clamp: var(--line-clamp, 2);
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 ::-webkit-scrollbar {
     border-radius: 0;
     width: 5px;

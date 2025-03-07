@@ -6,6 +6,7 @@
         --icon-color: brightness(0) saturate(100%) invert(6%) sepia(13%) saturate(6167%) hue-rotate(226deg)
             brightness(96%) contrast(93%);
         --header-bg-color: #eee;
+        --footer-bg-color: var(--header-bg-color);
         --body-bg-color: #f6f6f6;
         --top-act-group-bg-color: #fff;
         --top-act-group-shadow: rgba(237, 237, 246, 0.2);
