@@ -2459,6 +2459,8 @@ html.dark {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   background: #f8f8fb;
   border-radius: 6px;
   height: 46px;
