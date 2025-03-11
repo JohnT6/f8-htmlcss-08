@@ -42,7 +42,9 @@
 
 .btn {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 
     background: #f8f8fb;
     border-radius: 6px;
@@ -53,7 +55,9 @@
     user-select: none;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
