@@ -4,6 +4,10 @@
     display: flex;
     min-height: 100vh;
 
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     &__intro,
     &__content {
         flex: 1;
@@ -34,7 +38,7 @@
         }
 
         &-img {
-            max-width: 100%;
+            width: min(424px, 100%);
         }
 
         &-text {
@@ -43,6 +47,10 @@
             font-weight: 500;
             line-height: 1.44;
             text-align: center;
+
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -78,6 +86,10 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.47;
+
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+        }
     }
 
     &__desc {
@@ -88,11 +100,19 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__form {
         margin-top: 30px;
         width: 100%;
+
+        @include abstracts.screen(md) {
+            margin-top: 0;
+        }
     }
 
     &__link {
@@ -100,6 +120,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__btn-group {
@@ -119,5 +143,13 @@
         color: #9e9da8;
         font-size: 1.8rem;
         line-height: 1.44;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+
+        &-link {
+            font-size: inherit;
+        }
     }
 }
