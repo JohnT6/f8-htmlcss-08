@@ -50,10 +50,15 @@
         --product-detail-bg: #fff;
         // Product info
         --prod-detail-info-bg: #f6f6f6;
+        --product-detail-info-container-bg: #fff;
+        --prod-detail-tag-bg: #ededf6;
 
         // Breadcrumbs
         --breadcrumbs-bg: #f6f6f6;
         --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+        // Search Bar
+        --search-bar-bg: #fff;
     }
 
     @include abstracts.screen(lg) {
