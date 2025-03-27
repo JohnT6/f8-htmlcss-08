@@ -72,6 +72,9 @@ html.dark {
         --search-bar-bg: #171c28;
         --search-bar-icon-color: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(260%) hue-rotate(270deg)
             brightness(84%) contrast(85%);
+
+        // Review card
+        --review-card-bg: #171c28;
     }
 
     @include abstracts.screen(lg) {
