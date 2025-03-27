@@ -3042,6 +3042,9 @@ html.dark {
 }
 
 .review-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 30px;
   border-radius: 16px;
   background: var(--review-card-bg);
