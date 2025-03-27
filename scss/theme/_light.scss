@@ -62,6 +62,9 @@
 
         // Review card
         --review-card-bg: #fafafd;
+
+        // Text content
+        --text-content-hr-bg: #ebebeb;
     }
 
     @include abstracts.screen(lg) {

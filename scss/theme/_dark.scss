@@ -75,6 +75,9 @@ html.dark {
 
         // Review card
         --review-card-bg: #171c28;
+
+        // Text content
+        --text-content-hr-bg: #3e4043 ;
     }
 
     @include abstracts.screen(lg) {
