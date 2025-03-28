@@ -1655,6 +1655,7 @@ body {
     --product-detail-bg: #fafafd;
     --breadcrumbs-bg: #fff;
     --prod-detail-info-bg: #fff;
+    --review-card-bg: #fff;
   }
 }
 
@@ -3094,6 +3095,11 @@ html.dark {
   font-weight: 500;
   line-height: 1.45;
 }
+@media (max-width: 575.98px) {
+  .review-card__title {
+    font-size: 1.8rem;
+  }
+}
 .review-card__desc {
   margin-top: 10px;
   line-height: 1.5;
@@ -3679,11 +3685,14 @@ html.dark {
 .prod-tab__content--current {
   display: block;
 }
+.prod-tab__text-content {
+  margin-top: -20px;
+}
 
 .prod-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 1.42;
 }
 
