@@ -220,6 +220,15 @@
         display: flex;
         align-items: center;
         margin: 0 -30px;
+
+        @include abstracts.screen(md) {
+            margin: 0 -20px;
+            flex-wrap: wrap;
+        }
+
+        @include abstracts.screen(sm) {
+            margin: 0 -10px;
+        }
     }
 
     &__item {
@@ -228,6 +237,21 @@
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 1.45;
+        user-select: none;
+        white-space: nowrap;
+
+        @include abstracts.screen(md) {
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+
+        @include abstracts.screen(sm) {
+            padding: 8px 10px;
+        }
+
+        &:not(&--current) {
+            cursor: pointer;
+        }
 
         &--current {
             color: inherit;
@@ -248,7 +272,6 @@
 }
 
 .prod-content {
-
     &__heading {
         margin-bottom: 30px;
         font-size: 2.4rem;
