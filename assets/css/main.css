@@ -1647,7 +1647,8 @@ body {
   --checkout-breadcrumbs-bg: #fff;
   --checkout-cart-info-bg: #fff;
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
-  --checkout-border-color: #D2D1D6;
+  --checkout-border-color: #d2d1d6;
+  --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   :root {
@@ -1722,6 +1723,7 @@ html.dark {
   --checkout-cart-info-bg: #171c28;
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
   --checkout-border-color: #292e39;
+  --checkout-gift-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -3852,6 +3854,56 @@ html.dark {
 .cart-info__list {
   margin-top: -30px;
 }
+.cart-info__bottom {
+  margin-top: 30px;
+}
+.cart-info__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.cart-info__separate {
+  margin: 30px 0;
+  height: 1px;
+  background: var(--checkout-border-color);
+}
+.cart-info__continue {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.cart-info__continue-icon {
+  rotate: 90deg;
+  transition: translate 0.3s;
+}
+.cart-info__row, .cart-info__continue-link {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.cart-info__row--bold {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.cart-info__continue-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart-info__continue-link:hover .cart-info__continue-icon {
+  translate: -5px;
+}
+.cart-info__sub-label {
+  font-weight: 400;
+}
+.cart-info__next-btn {
+  margin-top: 30px;
+}
+
+.cart-info + .cart-info {
+  margin-top: 30px;
+}
 
 .cart-item {
   display: flex;
@@ -3928,6 +3980,32 @@ html.dark {
 }
 .cart-item__ctrl-btn:first-child {
   margin-right: 10px;
+}
+
+.gift-item {
+  display: flex;
+  gap: 20px;
+}
+.gift-item__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 14px;
+  background: rgba(118, 68, 225, 0.1);
+  box-shadow: 0px 20px 60px 10px var(--checkout-gift-shadow);
+}
+.gift-item__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.gift-item__desc {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  line-height: 1.43;
 }
 
 /*# sourceMappingURL=main.css.map */
