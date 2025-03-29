@@ -3924,6 +3924,7 @@ html.dark {
 @media (max-width: 767.98px) {
   .cart-item {
     padding: 16px 0;
+    gap: 16px;
   }
   .cart-item:last-child {
     border: none;
@@ -3978,11 +3979,6 @@ html.dark {
   font-weight: 500;
   line-height: 1.44;
 }
-@media (max-width: 320px) {
-  .cart-item__title {
-    max-width: 264px;
-  }
-}
 .cart-item__price-wrap {
   margin: 16px 0;
   color: #9e9da8;
@@ -4027,6 +4023,7 @@ html.dark {
 }
 @media (max-width: 767.98px) {
   .cart-item__total-price {
+    margin-bottom: 16px;
     text-align: left;
   }
 }
