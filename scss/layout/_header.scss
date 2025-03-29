@@ -234,6 +234,7 @@
     }
 
     &__btn {
+        position: relative;
         @extend %flexItemsCenter;
         column-gap: 10px;
         padding: 13px 20px;
@@ -286,5 +287,115 @@
 
     &__qnt {
         margin-left: auto;
+    }
+}
+
+.act-dropdown {
+    position: absolute;
+    top: 48px;
+    right: -60px;
+    padding-top: 28px;
+    width: min(500px, 100vw);
+
+    &__inner {
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--header-act-dropdown-bg);
+        box-shadow: 0px 40px 90px 20px var(--header-act-dropdown-shadow-color);
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+
+    &__view-all {
+        color: #0071dc;
+        font-size: 1.8rem;
+        line-height: 1.45;
+    }
+
+    &__bottom {
+        margin: 20px 0;
+        padding: 20px 0;
+        border-width: 1px 0;
+        border-color: var(--header-act-dropdown-border-color);
+        border-style: solid;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__row + &__row {
+        margin-top: 10px;
+    }
+
+    &__row--bold {
+        font-weight: 500;
+    }
+
+    &__label,
+    &__value {
+        font-size: 1.8rem;
+        line-height: 1.45;
+    }
+
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+
+        &-btn {
+            min-width: 278px;
+        }
+    }
+
+    &__list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+}
+
+.cart-preview-item {
+    text-align: left;
+
+    &__img-wrap {
+        position: relative;
+        padding-top: 100%;
+        border: 1px solid var(--header-act-dropdown-border-color);
+        border-radius: 10px;
+    }
+
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        margin-top: 14px;
+        font-size: 1.4rem;
+        line-height: 1.43;
+    }
+
+    &__price {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.47;
     }
 }
