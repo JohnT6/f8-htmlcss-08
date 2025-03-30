@@ -77,17 +77,28 @@
                                             <h2 class="user-address__title">Shipping address</h2>
                                             <p class="user-address__desc">Where should we deliver your order?</p>
                                         </div>
-                                        <button class="user-address__btn btn btn--primary btn--rounded">
+                                        <button class="user-address__btn btn btn--primary btn--rounded btn--small">
                                             <img src="./assets/icons/plus.svg" alt="" />
                                             Add a new address
                                         </button>
                                     </div>
                                     <div class="user-address__list">
+                                        <!-- Empty message -->
+                                        <!-- <p class="user-address__message">
+                                            Not address yet. <a href="#!" class="user-address__link">Add a new address</a>
+                                         </p> -->
                                         <!-- Address card 1 -->
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <!-- custom checkbox -->
+                                                    <label class="cart-info__checkbox">
+                                                        <input
+                                                            type="radio"
+                                                            name="shipping-adress"
+                                                            checked
+                                                            class="cart-info__checkbox-input"
+                                                        />
+                                                    </label>
                                                 </div>
                                                 <div class="address-card__info">
                                                     <h3 class="address-card__title">Imran Khan</h3>
@@ -113,7 +124,13 @@
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <!-- custom checkbox -->
+                                                    <label class="cart-info__checkbox">
+                                                        <input
+                                                            type="radio"
+                                                            name="shipping-adress"
+                                                            class="cart-info__checkbox-input"
+                                                        />
+                                                    </label>
                                                 </div>
                                                 <div class="address-card__info">
                                                     <h3 class="address-card__title">Imran Khan</h3>
