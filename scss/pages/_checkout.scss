@@ -28,6 +28,19 @@
         padding: 16px;
     }
 
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    &__sub-heading {
+        margin: 30px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
     &__list {
         margin-top: -30px;
 
@@ -265,5 +278,76 @@
         margin-top: 10px;
         font-size: 1.4rem;
         line-height: 1.43;
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 1.47;
+    }
+}
+
+.address-card {
+    display: flex;
+    margin-top: 30px;
+
+    &__left {
+        display: flex;
+        flex: 1;
+        gap: 16px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 1.47;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 20px;
+        gap: 30px;
+        list-style: disc inside;
+        font-size: 1.4rem;
+        line-height: 1.43;
+
+        &-item {
+            margin-left: 8px;
+        }
+    }
+
+    &__ctrl {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.8rem;
+            line-height: 1.44;
+        }
     }
 }
