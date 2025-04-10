@@ -72,9 +72,10 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:active,
 textarea:-webkit-autofill:hover {
-    transition: backgorund-color 1s 99999s;
+    transition: background-color 1s 99999s;
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--primary-color-text);
+    caret-color: var(--primary-color-text);
 }
 
 .icon {
