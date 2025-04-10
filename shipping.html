@@ -391,7 +391,7 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded"
+                                <a href="./payment.html" class="cart-info__next-btn btn btn--primary btn--rounded"
                                     >Continue to checkout</a
                                 >
                             </div>
@@ -424,16 +424,16 @@
         <!-- Modal: confirm remove shopping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <div class="modal__text">Do you want to remove this item from shopping cart?</div>
+                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
                 <div class="modal__bottom">
-                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#delete-confirm">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
                     </button>
                     <button
-                        class="btn btn--small btn--primary btn--no-margin modal__btn js-toggle"
+                        class="btn btn--small btn--danger btn--primary modal__btn btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
-                        Confirm
+                        Delete
                     </button>
                 </div>
             </div>
@@ -441,7 +441,7 @@
         </div>
 
         <!-- Modal: address new shipping address -->
-        <div id="add-new-address" class="modal show" style="--content-width: 650px">
+        <div id="add-new-address" class="modal hide" style="--content-width: 650px">
             <div class="modal__content">
                 <form action="" class="form">
                     <h2 class="modal__heading">Add new shipping address</h2>
