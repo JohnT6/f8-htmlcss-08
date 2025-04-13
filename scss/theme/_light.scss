@@ -7,6 +7,8 @@
             brightness(96%) contrast(93%);
         --header-bg-color: #eee;
         --footer-bg-color: var(--header-bg-color);
+        // Separate
+        --separate-color: #d2d1d6;
         --body-bg-color: #f6f6f6;
         --top-act-group-bg-color: #fff;
         --top-act-group-shadow: rgba(237, 237, 246, 0.2);
@@ -90,8 +92,11 @@
         // Profile
         --profile-sidebar-bg: #fff;
         --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
-        --profile-sidebar-link-hover:#ebebeb;
+        --profile-sidebar-link-hover: #ebebeb;
 
+        // Account info
+        --account-info-bg: #f6f6f6;
+        --account-info-icon-bg: #fff;
     }
 
     @include abstracts.screen(lg) {

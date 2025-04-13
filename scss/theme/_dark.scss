@@ -8,6 +8,8 @@ html.dark {
         --header-bg-color: #171c28;
         --footer-bg-color: var(--header-bg-color);
         --footer-text-color: #9e9da6;
+        // Separate
+        --separate-color:#292e39;
 
         --body-bg-color: #292e39;
         --top-act-group-bg-color: #292e39;
@@ -104,6 +106,10 @@ html.dark {
         --profile-sidebar-bg: #171c28;
         --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
         --profile-sidebar-link-hover:#2f3441;
+
+        // Account info 
+        --account-info-bg:#292e39;
+        --account-info-icon-bg:#171c28;
     }
 
     @include abstracts.screen(lg) {

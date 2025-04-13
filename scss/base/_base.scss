@@ -95,6 +95,12 @@ body {
     overflow: hidden;
 }
 
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: var(--separate-color);
+}
+
 ::-webkit-scrollbar {
     border-radius: 0;
     width: 5px;
