@@ -148,7 +148,7 @@ html {
 }
 
 body {
-  font-family: "Gordita", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   color: var(--primary-color-text);
   background-color: var(--body-bg-color);
@@ -1707,11 +1707,11 @@ html.dark {
   --header-bg-color: #171c28;
   --footer-bg-color: var(--header-bg-color);
   --footer-text-color: #9e9da6;
-  --separate-color:#292e39;
+  --separate-color: #292e39;
   --body-bg-color: #292e39;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-  --top-act-group-separate-color: #ededf6;
+  --top-act-group-separate-color: #545458;
   --header-act-dropdown-bg: #2f3441;
   --header-act-dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --header-act-dropdown-border-color: #171c28;
@@ -1766,9 +1766,9 @@ html.dark {
   --dialog-shadow: rgba(23, 28, 40, 0.4);
   --profile-sidebar-bg: #171c28;
   --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
-  --profile-sidebar-link-hover:#2f3441;
-  --account-info-bg:#292e39;
-  --account-info-icon-bg:#171c28;
+  --profile-sidebar-link-hover: #2f3441;
+  --account-info-bg: #292e39;
+  --account-info-icon-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1788,7 +1788,7 @@ html.dark {
   position: relative;
   z-index: 2;
   background: var(--header-bg-color);
-  padding: 30px 0;
+  padding: 20px 0;
 }
 @media (max-width: 991.98px) {
   .header {
@@ -2570,7 +2570,7 @@ html.dark {
   position: relative;
   width: 100%;
   flex-shrink: 0;
-  padding-top: 34%;
+  padding-top: 26%;
 }
 @media (max-width: 767.98px) {
   .slideshow__item {
@@ -2642,7 +2642,7 @@ html.dark {
   align-items: center;
   gap: 20px;
   height: 100%;
-  padding: 20px 26px 20px 20px;
+  padding: 20px;
   border-radius: 16px;
   background: var(--cate-item-bg);
 }
@@ -2664,8 +2664,8 @@ html.dark {
   }
 }
 .cate-item__thumb {
-  width: 116px;
-  height: 116px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   background: var(--cate-item-thumb-bg);
   border-radius: 8px;
@@ -3096,7 +3096,7 @@ html.dark {
 }
 .form__text-input {
   position: relative;
-  height: 50px;
+  height: 48px;
 }
 .form__text-input--small {
   height: 42px;
